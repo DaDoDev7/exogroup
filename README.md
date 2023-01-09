@@ -35,4 +35,4 @@ text-overflow
 c'est une propriété qui spécifie comment le contenu débordé qui n'est pas affiché doit être signalé à l'utilisateur.
 Notez que text-overflow ne se produit que lorsque la overflow propriété du conteneur a la valeur hidden, scroll ou auto et white-space: nowrap;.
 
-Les values -> text-overflow: clip (défaut)|ellipsis(...)|string|initial|inherit;
+Les values -> text-overflow: clip (défaut)|ellipsis(...)|string|fade;

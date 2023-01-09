@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+   
+  
+</head>
+
+<style>
+    /*------------- :where */
+
+/* ici spécificité 0.0.2  car 2 selecteurs
+    
+    main h1, main h2, main h3 {
+    color: orange;
+    }
+ */
+
+  /* est égale à cette écriture mais spécificité 0.0.1*/
+
+  main :where(h1, h2, h3) {
+    color: rgb(0, 255, 106);
+  }
+
+  /* autre exemple 
+
+    header a, footer a {
+    color: orange;
+  } 
+
+  devient */
+
+  :where(header, footer) a {
+    color: red;
+    text-decoration: none;
+  }
+
+
+  /*------------ :has */
+
+  div:has(p) {
+    color: blue;
+  }
+
+
+/* text-overflow */
+.over {
+  width: 200px;
+ border: 1px solid black;
+ overflow: hidden;
+ white-space: nowrap;
+  
+}
+ p{
+ 
+ 
+  text-overflow: fade(50% 50%);
+}
+</style>
+<body>
+    
+<header>
+    <a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere eaque soluta explicabo laboriosam. Optio laboriosam,</a> 
+    <a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere eaque soluta explicabo laboriosam. Optio laboriosam,</a> 
+</header>
+
+<main>
+    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab, repudiandae mollitia unde amet sint. Dolor aperiam quam quo consequuntur recusandae, velit accusamus ex. Accusantium illum quas nostrum officiis aut.</p>
+    </div>
+
+    <div>
+        <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eum laudantium temporibus incidunt quos illum cumque alias autem. Iusto commodi modi neque laudantium similique nemo error sunt dolor accusamus reiciendis?</a>
+    </div>
+
+    <div class="over">
+       
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab, repudiandae mollitia unde amet sint. Dolor aperiam quam quo consequuntur recusandae, velit accusamus ex. Accusantium illum quas nostrum officiis aut.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab, repudiandae mollitia unde amet sint. Dolor aperiam quam quo consequuntur recusandae, velit accusamus ex. Accusantium illum quas nostrum officiis aut.</p>
+        
+    </div>
+
+</main>
+
+<div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus provident quo dolorem doloribus? Ab distinctio mollitia nemo nisi iste repudiandae, maxime, aspernatur accusantium exercitationem tempora deleniti libero veniam neque eos?
+</div>
+
+<footer>
+    <a href="">blabla</a>
+    <a href="">blabla</a>
+    <a href="">blabla</a>
+</footer>
+
+    
+</body>
+</html>
